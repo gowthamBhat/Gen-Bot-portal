@@ -1,0 +1,39 @@
+.navbar-main ul {
+  margin-top: 10px;
+  list-style-type: none;
+  border-radius: 30px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #04192e;
+  height: 60px;
+  width: 70%;
+}
+
+.navbar-main {
+  margin-top: 50px;
+}
+.navbar-main li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+.navbar-main li:last-child {
+  border-right: none;
+}
+
+.navbar-main li .link-tag {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 30px 25px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.navbar-main li .link-tag:hover:not(.active) {
+  background-color: #111;
+}
+
+.navbar-main .active {
+  background-color: #ea5762;
+}
