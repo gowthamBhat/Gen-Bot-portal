@@ -69,7 +69,11 @@ function Submissions() {
               </p>
               <p>no of docs submitted: {x.docs.length}</p>
               {x.docs.map((x, idx) => (
-                <a key={idx} href={'http://localhost:8000/uploads/' + x}>
+                <a
+                  className="docs-submitted-list"
+                  key={idx}
+                  href={'http://localhost:8000/uploads/' + x}
+                >
                   {idx + 1}
                 </a>
               ))}
