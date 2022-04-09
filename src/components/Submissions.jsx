@@ -59,15 +59,27 @@ function Submissions() {
           style={{ maxWidth: '23rem' }}
         >
           <div className="card-header">
-            <p>{x.email} </p>
+            <p style={{ color: '#ff555f', fontWeight: '700' }}>{x.email} </p>
           </div>
           <div className="card-body text-dark">
-            <h5 className="card-title">name:{x.firstname}</h5>
+            <h5 className="card-title ">
+              <span className="card-text-color">Name: </span>
+              {x.firstname}
+            </h5>
+            <h6 className="card-title ">
+              <span className="card-text-color">Designation: </span>
+              {x.designation}
+            </h6>
             <div className="card-text">
               <p>
-                date of submission: <Moment date={new Date(x.updatedAt)} />{' '}
+                <b className="card-text-color">Last date to submit: </b>
+                <Moment date={new Date(x.lastdatetosubmit)} />{' '}
               </p>
-              <p>no of docs submitted: {x.docs.length}</p>
+              <p>
+                {' '}
+                <b className="card-text-color">Num of docs submitted:</b>{' '}
+                {x.docs.length}
+              </p>
               {x.docs.map((x, idx) => (
                 <a
                   className="docs-submitted-list"
